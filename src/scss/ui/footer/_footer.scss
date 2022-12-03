@@ -4,7 +4,7 @@
 .footer{
 
   padding: 3rem 0;
-  border-bottom: .5rem solid v.$primario;  //pra el borde del footer abajo se agregan en el padre
+  border-bottom: .5rem solid v.$primario; 
 
   &__grid{
     @include m.tablet{

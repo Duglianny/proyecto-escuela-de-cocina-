@@ -6,15 +6,15 @@
   &__grid{
     @include m.tablet{
       @include m.grid(2,0rem);
-      grid-auto-flow: dense;  //se aplica aqui en el padre y esto lo que hace es rellenar el espacio del grid ya que al colocar y mover ese columna la otra hace un salto de linea dejando un espacio vacio con esta propiedad se rellena ese vaio con la imagen que hizo el salto de linea como se uiere 
+      grid-auto-flow: dense;  
     }
 
   }
 }
 
 .bloque{
-  height: 40rem;  //para darle una altura fija a los bloques 
-  display: flex;  //aqui en el padre se aplica el codigo para centrar a contenido tanto vertical como horizontalmente cabe destacar que los bloques de las imagenes no se vera afectado pero la de los contenidos si 
+  height: 40rem;  
+  display: flex;  
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -26,13 +26,13 @@
   }
 
   &:nth-child(2){
-   @include m.bg_image('../img/bloque_1.jpg');  //con el mixin se le coloca la imagen al bloque deseasdo 
+   @include m.bg_image('../img/bloque_1.jpg');   
   }
 
   &:nth-child(3){
     background-color: v.$secundario;
 
-   @include m.tablet{   //debido que al colocar este bloque en esa columna el contenido que ya estaba en esa posicion se movera hacia abajo creando otra columna para ello se coloca en el padr de bloque un grid-auto-flow
+   @include m.tablet{   
     grid-column: 2/3;
    }
   }
@@ -42,7 +42,7 @@
   }
 
 
-  &__contenido{   // el padre de contenido es bloque por ende para centar todo el contenido se aplica el codigo en el padre 
+  &__contenido{   
     max-width: 40rem;
 
     border-top: 1px solid v.$blanco;
