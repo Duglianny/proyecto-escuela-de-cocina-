@@ -50,3 +50,27 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
+
+
+@mixin bg_image($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+@mixin heading {
+    text-align: center;
+
+    &::after{
+        content: '';
+        display: block;  //para que la imagen este abajo del texto del titulo 
+        height: 10rem;
+        margin: 0 auto; //para que siempre este centrado 
+        background-image: url(../img/separador.png);
+        background-repeat: no-repeat;
+        background-position: center center;  //para que siempre este centrado debajo del titulo
+    }
+
+}
